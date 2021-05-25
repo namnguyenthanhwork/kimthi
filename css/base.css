@@ -8,7 +8,9 @@
     --white-color: #fff;
     --black-color: #000;
     --playertrack-bg: #fa4e4e;
-    --player--bg:#862525;
+    --player--bg: #862525;
+    --control-color: #757575;
+    --shadow-color: #afb7c1;
 }
 
 body {

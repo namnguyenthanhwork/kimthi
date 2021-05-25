@@ -30,7 +30,7 @@
     top: 0;
     right: 15px;
     left: 15px;
-    padding: 13px 22px 10px 184px;
+    padding: 9px 22px 10px 184px;
     background-color: var(--playertrack-bg);
     border-radius: 15px 15px 0 0;
     transition: 0.3s ease top;
@@ -38,7 +38,7 @@
 }
 
 #player-track.active {
-    top: -92px;
+    top: -90px;
 }
 
 #album-name {
@@ -134,29 +134,32 @@
 
 #player-content {
     position: relative;
-    height: 100%;
+    height: 90%;
     background-color: var(--player--bg);
-    box-shadow: 0 30px 80px #656565;
-    border-radius: 15px;
+    border-radius: 10px;
     z-index: 2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 #album-art {
     position: absolute;
     top: -40px;
-    width: 115px;
-    height: 115px;
+    width: 110px;
+    height: 110px;
     margin-left: 40px;
     transform: rotateZ(0);
     transition: 0.3s ease all;
-    box-shadow: 0 0 0 10px #fff;
+    box-shadow: 0 0 0 8px var(--white-color);
     border-radius: 50%;
     overflow: hidden;
 }
 
 #album-art.active {
     top: -60px;
-    box-shadow: 0 0 0 4px #fff7f7, 0 15px 50px -15px #afb7c1;
+    box-shadow: 0 0 0 4px var(--white-color), 0 0 15px 5px var(--shadow-color);
 }
 
 #album-art:before {
@@ -168,9 +171,9 @@
     width: 20px;
     height: 20px;
     margin: -10px auto 0 auto;
-    background-color: #d6dee7;
+    background-color: var(--control-color);
     border-radius: 50%;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--white-color);
     z-index: 2;
 }
 
@@ -258,8 +261,8 @@
 }
 
 .button {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     background-color: var(--player--bg);
     cursor: pointer;
     border-radius: 10px;
@@ -271,10 +274,10 @@
 
 .button i {
     display: block;
-    color: #757575;
+    color: var(--control-color);
     font-size: 25px;
     text-align: center;
-    line-height: 70px;
+    line-height: 65px;
 }
 
 .button,

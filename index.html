@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nguyễn Thị Kim Thi</title>
+	<meta name="description" content="Nguyễn Thị Kim Thi" />
+	<meta property="og:description" content="Tình yêu nhỏ bé - Kim Thi" />
+	<meta property="og:image" content="./img/bg-web/1.jpg" />
+
+	<!-- Library CSS -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="./css/music.css">
+
+	<script src="./js/load.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/snow.js"></script>
+</head>
+
+<body onload="timedCount()">
+	<div id="container">
+		<div id="stage">
+			<div id="shape" class="cube backfaces">
+				<div class="plane one"></div>
+				<div class="plane two"></div>
+				<div class="plane three"></div>
+				<div class="plane four"></div>
+				<div class="plane five"></div>
+				<div class="plane six"></div>
+				<div class="plane seven"></div>
+				<div class="plane eight"></div>
+				<div class="plane nine"></div>
+				<div class="plane ten"></div>
+				<div class="plane eleven"></div>
+				<div class="plane twelve"></div>
+			</div>
+		</div>
+
+		<div class="audio">
+			<div id="app-cover">
+				<div id="bg-artwork"></div>
+				<div id="bg-layer"></div>
+				<div id="player">
+					<div id="player-track">
+						<div id="album-name"></div>
+						<div id="track-name"></div>
+						<div id="track-time">
+							<div id="current-time"></div>
+							<div id="track-length"></div>
+						</div>
+						<div id="s-area">
+							<div id="ins-time"></div>
+							<div id="s-hover"></div>
+							<div id="seek-bar"></div>
+						</div>
+					</div>
+					<div id="player-content">
+						<div id="album-art">
+							<img src="./music_image/_1.jpg" class="active" id="_1">
+							<img src="./music_image/_2.jpg" id="_2">
+							<img src="./music_image/_3.jpg" id="_3">
+							<img src="./music_image/_4.jpg" id="_4">
+							<img src="./music_image/_5.jpg" id="_5">
+							<img src="./music_image/_6.jpg" id="_6">
+							<img src="./music_image/_7.jpg" id="_7">
+							<img src="./music_image/_8.jpg" id="_8">
+							<div id="buffer-box">Waiting ...</div>
+						</div>
+						<div id="player-controls">
+							<div class="control">
+								<div class="button" id="play-previous">
+									<i class="fas fa-backward"></i>
+								</div>
+							</div>
+							<div class="control">
+								<div class="button" id="play-pause-button">
+									<i class="fas fa-play"></i>
+								</div>
+							</div>
+							<div class="control">
+								<div class="button" id="play-next">
+									<i class="fas fa-forward"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src='./js/music.js'></script>
+</body>
+
+</html>

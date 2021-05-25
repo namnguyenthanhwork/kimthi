@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --playertrack-bg: #fa4e4e;
+    --player--bg:#862525;
+}
+
+body {
+    background: url(../img/bg-web/1.jpg) center top no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 720px;
+    max-height: 1024px;
+    transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -ms-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+}
+
+audio {
+    max-width: 300px;
+    max-height: 30px;
+}

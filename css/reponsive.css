@@ -1,0 +1,21 @@
+@media (max-width: 991px) {
+    #shape {
+        top: 350px;
+    }
+}
+
+@media (max-width:767px) {
+    .overlay {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99999;
+        background-color: var(--white-color);
+    }
+
+}

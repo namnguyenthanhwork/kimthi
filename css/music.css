@@ -14,7 +14,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: var(--white-color);
     opacity: 0.51;
     z-index: 2;
 }
@@ -286,9 +286,9 @@
 }
 
 .button:hover {
-    background-color: #6f7071;
+    background-color: var(--shadow-color);
 }
 
 .button:hover i {
-    color: #fff;
+    color: var(--white-color);
 }

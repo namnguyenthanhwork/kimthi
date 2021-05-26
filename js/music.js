@@ -261,34 +261,36 @@ $(function () {
     }
 
     function initPlayer() {
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|zmp3/i.test(navigator.userAgent);
+        if (window.innerWidth >= 768) {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|zmp3/i.test(navigator.userAgent);
 
-        audio = new Audio();
-        if (isMobile == false) {
-            autoplaytrack();
+            audio = new Audio();
+            if (isMobile == false) {
+                autoplaytrack();
+            }
+            selectTrack(0);
+
+            audio.loop = false;
+
+            playPauseButton.on('click', playPause);
+
+            sArea.mousemove(function (event) {
+                showHover(event);
+            });
+
+            sArea.mouseout(hideHover);
+
+            sArea.on('click', playFromClickedPos);
+
+            $(audio).on('timeupdate', updateCurrTime);
+
+            playPreviousTrackButton.on('click', function () {
+                selectTrack(-1);
+            });
+            playNextTrackButton.on('click', function () {
+                selectTrack(1);
+            });
         }
-        selectTrack(0);
-
-        audio.loop = false;
-
-        playPauseButton.on('click', playPause);
-
-        sArea.mousemove(function (event) {
-            showHover(event);
-        });
-
-        sArea.mouseout(hideHover);
-
-        sArea.on('click', playFromClickedPos);
-
-        $(audio).on('timeupdate', updateCurrTime);
-
-        playPreviousTrackButton.on('click', function () {
-            selectTrack(-1);
-        });
-        playNextTrackButton.on('click', function () {
-            selectTrack(1);
-        });
     }
 
     initPlayer();

@@ -9,24 +9,28 @@
 
 	<!-- Library CSS -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+
 	<!-- Main CSS -->
 	<link rel="shortcut icon" type="image/png" href="./img/favicon.ico" />
 	<link rel="stylesheet" href="./css/base.css">
 	<link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="./css/music.css">
-	<link rel="stylesheet" href="./css/reponsive.css">
 
-	<script src="./js/load.js"></script>
+	<!-- Library JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="./js/snow.js"></script>
+
+	<!-- Main JS -->
+	<script src="./js/load.js"></script>
 	<script src='./js/music.js'></script>
 </head>
 
 <body onload="timedCount()">
+	<!-- Disable when window.width < 768px -->
 	<div class="overlay">
-		<h1>Ứng dụng không hỗ trợ xem trên mobile</h1>
+		<h1>App not support on Mobile (Sorry '-')</h1>
 	</div>
 
 	<div id="container">
@@ -47,11 +51,14 @@
 				<div class="plane twelve"></div>
 			</div>
 		</div>
+
 		<!-- Audio -->
 		<div class="audio">
 			<div id="app-cover">
 				<div id="bg-artwork"></div>
 				<div id="bg-layer"></div>
+
+				<!-- Player -->
 				<div id="player">
 					<div id="player-track">
 						<div id="album-name"></div>
@@ -66,18 +73,29 @@
 							<div id="seek-bar"></div>
 						</div>
 					</div>
+
+					<!-- Player art -->
 					<div id="player-content">
 						<div id="album-art">
 							<img src="./img/trackArt/Capture1.jpg" class="active" id="_1">
 							<img src="./img/trackArt/Capture2.jpg" id="_2">
-							<img src="./img/trackArt/Capture3.jpg" id="_3">
+							<img src="./img/trackArt/Capture3.png" id="_3">
 							<img src="./img/trackArt/Capture4.jpg" id="_4">
 							<img src="./img/trackArt/Capture5.jpg" id="_5">
 							<img src="./img/trackArt/Capture6.jpg" id="_6">
-							<img src="./img/trackArt/Capture7.jpg" id="_7">
+							<img src="./img/trackArt/Capture7.png" id="_7">
 							<img src="./img/trackArt/Capture8.jpg" id="_8">
+							<img src="./img/trackArt/Capture9.jpg" id="_9">
+							<img src="./img/trackArt/Capture10.jpg" id="_10">
+							<img src="./img/trackArt/Capture11.jpg" id="_11">
+							<img src="./img/trackArt/Capture12.jpg" id="_12">
+							<img src="./img/trackArt/Capture13.jpg" id="_13">
+							<img src="./img/trackArt/Capture14.jpg" id="_14">
+							<img src="./img/trackArt/Capture15.jpg" id="_15">
 							<div id="buffer-box">Waiting ...</div>
 						</div>
+
+						<!-- Player control -->
 						<div id="player-controls">
 							<div class="control">
 								<div class="button" id="play-previous">

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap);
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +8,15 @@
 
 :root {
     --white-color: #fff;
+    --light-white: #ffe8ee;
     --black-color: #000;
+    --light-black: #3b3d50;
     --playertrack-bg: #fa4e4e;
-    --player--bg: #862525;
+    --player--bg: #a82d2d;
+    --control-bg: #862525;
     --control-color: #757575;
     --shadow-color: #afb7c1;
+    --seek-bar: #a82d2d;
 }
 
 body {
@@ -20,6 +26,8 @@ body {
     height: 100vh;
     min-height: 720px;
     max-height: 1024px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
     transition: all 3s ease-in-out;
     -webkit-transition: all 3s ease-in-out;
     -moz-transition: all 3s ease-in-out;

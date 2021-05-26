@@ -18,6 +18,13 @@ $(function () {
         clearautoplay = null,
         tFlag = false,
         albums = [
+            'A Little Love',
+            'Beautiful In White',
+            'A Thousand Year',
+            'Take Me To Your Heart',
+            'My Heart Will Go On',
+            'Until You',
+            'My Love',
             'The Nights',
             'Waiting For Love',
             'I Really Like You',
@@ -27,7 +34,15 @@ $(function () {
             'Unstoppable',
             'I Love You 3000'
         ],
-        trackNames = ['Avicii',
+        trackNames = [
+            'Fiona Fung',
+            'Shane Filan',
+            'Chiristina Perri',
+            'Michael',
+            'Celine Dion',
+            'Shayne Ward',
+            'Westlife',
+            'Avicii',
             'Avicii',
             'Carly Rae Jepsen',
             'Gryffin ft Elley Duhé',
@@ -36,8 +51,19 @@ $(function () {
             'Sia',
             'Stephanie Poetri'
         ],
-        albumArtworks = ['_1', '_2', '_3', '_4', '_5', '_6', '_7', '_8'],
+        albumArtworks = [
+            '_1', '_2', '_3', '_4', '_5',
+            '_6', '_7', '_8', '_9', '_10',
+            '_11', '_12', '_13', '_14', '_15'
+        ],
         trackUrl = [
+            'music/Fiona Fung - A little love.mp3',
+            'music/Shane Filan - Beautiful In White.mp3',
+            'music/Christina Perri - A Thousand Years.mp3',
+            'music/Michael - Take Me To Your Heart.mp3',
+            'music/Celine Dion - My Heart Will Go On.mp3',
+            'music/Shayne Ward  - Until You.mp3',
+            'music/Westlife - My Love.mp3',
             'music/Avicii - The Nights.mp3',
             'music/Avicii - Waiting For Love.mp3',
             'music/Carly Rae Jepsen - I Really Like You.mp3',
@@ -51,6 +77,7 @@ $(function () {
         playNextTrackButton = $('#play-next'),
         currIndex = -1;
 
+    // play pause
     function playPause() {
         setTimeout(function () {
             if (audio.paused) {
@@ -72,6 +99,8 @@ $(function () {
         }, 300);
     }
 
+
+    // show hover
     function showHover(event) {
         seekBarPos = sArea.offset();
         seekT = event.clientX - seekBarPos.left;
@@ -107,6 +136,7 @@ $(function () {
 
     }
 
+    // hide hover
     function hideHover() {
         sHover.width(0);
         insTime.text('00:00').css({
@@ -115,12 +145,14 @@ $(function () {
         }).fadeOut(0);
     }
 
+    // play from clicked position
     function playFromClickedPos() {
         audio.currentTime = seekLoc;
         seekBar.width(seekT);
         hideHover();
     }
 
+    // update current time
     function updateCurrTime() {
         nTime = new Date();
         nTime = nTime.getTime();
@@ -172,6 +204,7 @@ $(function () {
         }
     }
 
+    // no play track
     function noplaytrack() {
         i.attr('class', 'fa fa-play');
         seekBar.width(0);
@@ -180,6 +213,7 @@ $(function () {
         clearInterval(buffInterval);
     }
 
+    // check buffering
     function checkBuffering() {
         clearInterval(buffInterval);
         buffInterval = setInterval(function () {
@@ -194,6 +228,7 @@ $(function () {
         }, 100);
     }
 
+    // select track
     function selectTrack(flag) {
         if (flag == 0 || flag == 1)
             ++currIndex;
@@ -250,6 +285,7 @@ $(function () {
         }
     }
 
+    // auto play track
     function autoplaytrack() {
         clearautoplay = setInterval(function () {
             playerTrack.addClass('active');
@@ -260,6 +296,7 @@ $(function () {
         }, 6000);
     }
 
+    // init player
     function initPlayer() {
         if (window.innerWidth >= 768) {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|zmp3/i.test(navigator.userAgent);
@@ -292,6 +329,5 @@ $(function () {
             });
         }
     }
-
     initPlayer();
 });

@@ -1,13 +1,16 @@
+// check has class name
 function hasClassName(inElement, inClassName) {
     var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
     return regExp.test(inElement.className);
 }
 
+// add class name
 function addClassName(inElement, inClassName) {
     if (!hasClassName(inElement, inClassName))
         inElement.className = [inElement.className, inClassName].join(' ');
 }
 
+// remove class name
 function removeClassName(inElement, inClassName) {
     if (hasClassName(inElement, inClassName)) {
         var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
@@ -16,6 +19,7 @@ function removeClassName(inElement, inClassName) {
     }
 }
 
+// toggle class name
 function toggleClassName(inElement, inClassName) {
     if (hasClassName(inElement, inClassName))
         removeClassName(inElement, inClassName);
@@ -23,12 +27,14 @@ function toggleClassName(inElement, inClassName) {
         addClassName(inElement, inClassName);
 }
 
+// toggle shape
 function toggleShape() {
     var shape = document.getElementById('shape');
     if (hasClassName(shape, 'cube') || hasClassName(shape, 'autoLoad')) {
         if (hasClassName(shape, 'cube')) {
             removeClassName(shape, 'cube');
         }
+
         if (hasClassName(shape, 'autoLoad')) {
             removeClassName(shape, 'autoLoad');
         }
@@ -45,6 +51,8 @@ function toggleShape() {
         stage.style.transform = '';
 }
 
+
+// time count
 var count = 0;
 var num_bg = 1;
 var next_bg = 0;
@@ -76,6 +84,7 @@ function timedCount() {
     setTimeout(timedCount, 1000);
 }
 
+// auto load
 function autoLoad() {
     var shapeTest = document.getElementById('shape');
     if (hasClassName(shapeTest, 'cube')) {

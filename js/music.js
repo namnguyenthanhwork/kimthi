@@ -251,7 +251,6 @@ $(function () {
     }
 
     function autoplaytrack() {
-
         clearautoplay = setInterval(function () {
             playerTrack.addClass('active');
             albumArt.addClass('active');

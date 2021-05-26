@@ -40,9 +40,9 @@ function toggleShape() {
 
     var stage = document.getElementById('stage');
     if (hasClassName(shape, 'ring'))
-        stage.style.webkitTransform = 'translateZ(-200px)';
+        stage.style.transform = 'translateZ(-200px)';
     else
-        stage.style.webkitTransform = '';
+        stage.style.transform = '';
 }
 
 var count = 0;

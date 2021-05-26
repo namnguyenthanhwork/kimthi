@@ -94,3 +94,37 @@ function autoLoad() {
         toggleShape();
     }
 }
+
+// Initiate the wowjs animation library
+var wow = new WOW({
+    boxClass: 'wow', // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset: 100, // distance to the element when triggering the animation (default is 0)
+    mobile: true, // trigger animations on mobile devices (default is true)
+    live: true, // act on asynchronously loaded content (default is true)
+    scrollContainer: null, // optional scroll container selector, otherwise use window
+});
+wow.init();
+
+// confess love
+$(".gift-box i").click(function () {
+    $('.gift-box i, .gift-box h1').addClass('disable');
+    // init typing
+    new Typed(".typing", {
+        strings: [
+            "Thi à 😍",
+            "🤔 Anh không biết nói điều gì hơn lúc này ngoài câu 🤔",
+            "🥰😘 Anh thương em nhiều lắm 😘😍",
+            "😗😗😗 Cảm ơn em đã đến bên anh 😗😗😗"
+        ],
+        typeSpeed: 100,
+        backSpeed: 30,
+        loop: 0
+    });
+
+    function hidden() {
+        $('#gift-box').addClass('disable');
+        $('.gift-box span:nth-child(2)').addClass('disable');
+    }
+    setTimeout(hidden, 28900);
+});

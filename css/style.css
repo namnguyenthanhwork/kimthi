@@ -3,7 +3,7 @@
 	display: none;
 }
 
-.overlay h1 {
+.overlay h2 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -15,6 +15,70 @@
 	-o-transform: translate(-50%, -50%);
 }
 
+/* -----------
+	gift box
+	-------- */
+.gift-box {
+	position: relative;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 110vh;
+	background: var(--black-color);
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+.disable {
+	display: none;
+}
+
+.gift-box i,
+.gift-box .content {
+	position: absolute;
+	top: 42%;
+	left: 45%;
+	z-index: 1000;
+	font-size: 120px;
+	color: var(--playertrack-bg);
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.gift-box h1 {
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	color: var(--playertrack-bg);
+}
+
+.gift-box .content {
+	text-align: center;
+	z-index: 99;
+	top: 50%;
+	left: 50%;
+	font-size: 21px;
+	width: 70%;
+	height: unset;
+}
+
+.gift-box h2.enable {
+	display: block;
+}
+
+/* -----------
+	container
+	--------- */
 #container {
 	width: 100%;
 	height: 100%;
@@ -84,11 +148,11 @@
 
 
 #shape {
-	animation: spin 12s infinite linear;
-	-webkit-animation: spin 12s infinite linear;
+	animation: spinShape 12s infinite linear;
+	-webkit-animation: spinShape 12s infinite linear;
 }
 
-@keyframes spin {
+@keyframes spinShape {
 	from {
 		transform: rotateY(0);
 		-webkit-transform: rotateY(0);
@@ -499,7 +563,7 @@
 		background-color: var(--white-color);
 	}
 
-	h1 {
+	h2 {
 		text-align: center;
 	}
 

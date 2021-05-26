@@ -9,28 +9,42 @@
 
 	<!-- Library CSS -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+	<link rel="stylesheet" href="./lib/animate/animate.min.css">
 
 	<!-- Main CSS -->
 	<link rel="shortcut icon" type="image/png" href="./img/favicon.ico" />
+	<link rel="stylesheet" href="./lib/loader-page/loader.css">
 	<link rel="stylesheet" href="./css/base.css">
 	<link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="./css/music.css">
 
-	<!-- Library JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="./js/snow.js"></script>
 
-	<!-- Main JS -->
-	<script src="./js/load.js"></script>
-	<script src='./js/music.js'></script>
 </head>
 
 <body onload="timedCount()">
 	<!-- Disable when window.width < 768px -->
 	<div class="overlay">
-		<h1>App not support on Mobile (Sorry '-')</h1>
+		<h2>
+			App doesn't support on Mobile. If you want to see it, you must turn on computer mode (desktop site)
+			Thanks !!!
+		</h2>
+	</div>
+
+	<!-- Uncomment below i you want to use a preloader -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div id="loader_logo"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+
+	<!-- gift -->
+	<div id="gift-box" class="gift-box">
+		<h1>Nhớ bật F11 (Full screen) đễ có trải nghiệm tốt nhất !!!</h1>
+		<i class="fas fa-gift wow rubberBand" data-wow-duration="2s" data-wow-iteration="1000"></i>
+		<div class="content">
+			<span class="typing"></span>
+		</div>
 	</div>
 
 	<div id="container">
@@ -117,6 +131,20 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<!-- Library JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+	<script src="./lib/wow/wow.min.js"></script>
+
+	<!-- Main JS -->
+	<script src="./js/snow.js"></script>
+	<script src="./js/load.js"></script>
+	<script src='./js/music.js'></script>
+	<script src="./lib/loader-page/loader.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
 	gift box
 	-------- */
 .gift-box {
-	position: relative;
+	position: fixed;
 	z-index: 999;
 	top: 0;
 	left: 0;
@@ -28,15 +28,20 @@
 	width: 100vw;
 	height: 110vh;
 	background: var(--black-color);
-	transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
+	transition: all 2s ease-in-out;
+	-webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	-ms-transition: all 2s ease-in-out;
+	-o-transition: all 2s ease-in-out;
 }
 
-.disable {
-	display: none;
+.gift-box .disable {
+	opacity: 0;
+}
+
+.disable-gift {
+	left: -100%;
+	opacity: 0;
 }
 
 .gift-box i,
@@ -45,35 +50,50 @@
 	top: 42%;
 	left: 45%;
 	z-index: 1000;
+
+	opacity: 1;
 	font-size: 120px;
 	color: var(--playertrack-bg);
+
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
+
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 }
 
 .gift-box h1 {
 	position: absolute;
 	top: 10%;
 	width: 100%;
+
+	opacity: 1;
 	text-align: center;
 	color: var(--playertrack-bg);
+
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 }
 
 .gift-box .content {
-	text-align: center;
 	z-index: 99;
-	top: 50%;
+	top: 45%;
 	left: 50%;
-	font-size: 21px;
-	width: 70%;
-	height: unset;
-}
 
-.gift-box h2.enable {
-	display: block;
+	text-align: center;
+	font-size: 25px;
+
+	width: 80%;
+	height: unset;
 }
 
 /* -----------

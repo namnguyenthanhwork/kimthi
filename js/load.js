@@ -100,7 +100,7 @@ var wow = new WOW({
     boxClass: 'wow', // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
     offset: 100, // distance to the element when triggering the animation (default is 0)
-    mobile: true, // trigger animations on mobile devices (default is true)
+    mobile: false, // trigger animations on mobile devices (default is true)
     live: true, // act on asynchronously loaded content (default is true)
     scrollContainer: null, // optional scroll container selector, otherwise use window
 });
@@ -115,7 +115,8 @@ $(".gift-box i").click(function () {
             "Thi à 😍",
             "🤔 Anh không biết nói điều gì hơn lúc này ngoài câu 🤔",
             "🥰😘 Anh thương em nhiều lắm 😘😍",
-            "😗😗😗 Cảm ơn em đã đến bên anh 😗😗😗"
+            "😗😗😗 Cảm ơn em đã đến bên anh 😗😗😗",
+            "You're a little love of my life, i love u 😝😝😜"
         ],
         typeSpeed: 100,
         backSpeed: 30,
@@ -123,8 +124,8 @@ $(".gift-box i").click(function () {
     });
 
     function hidden() {
-        $('#gift-box').addClass('disable');
+        $('#gift-box').addClass('disable-gift');
         $('.gift-box span:nth-child(2)').addClass('disable');
     }
-    setTimeout(hidden, 28900);
+    setTimeout(hidden, 34000);
 });

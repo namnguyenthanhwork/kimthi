@@ -127,5 +127,5 @@ $(".gift-box i").click(function () {
         $('#gift-box').addClass('disable-gift');
         $('.gift-box span:nth-child(2)').addClass('disable');
     }
-    setTimeout(hidden, 34000);
+    setTimeout(hidden, 35000);
 });

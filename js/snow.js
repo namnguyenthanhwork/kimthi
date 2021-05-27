@@ -31,8 +31,8 @@ var snowStorm = function (g, f) {
     this.freezeOnBlur = !0; // Only snow when the window is in focus (foreground.) Saves CPU.
     this.flakeRightOffset = this.flakeLeftOffset = 0; // Left margin/gutter space on edge of container (eg. browser window.) Bump up these values if seeing horizontal scrollbars. Right margin/gutter space on edge of container
     this.flakeHeight = this.flakeWidth = 15; // Max pixel width & height reserved for snow element
-    this.vMaxX = 3; // Maximum X velocity range for snow
-    this.vMaxY = 3; // Maximum Y velocity range for snow
+    this.vMaxX = 5; // Maximum X velocity range for snow
+    this.vMaxY = 4; // Maximum Y velocity range for snow
     this.zIndex = 99999; // CSS stacking order applied to each snowflake
 
     // --- "No user-serviceable parts inside" past this point ---
